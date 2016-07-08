@@ -19,16 +19,18 @@
     h1.innerHTML="Console Checking Form";
     var legend=document.getElementById("legend");
     legend.innerHTML="300878960";
+    var form=document.getElementById("form");
     var username=document.getElementById("username").nodeValue;
     var password=document.getElementById("password").nodeValue;
-    var button=document.getElementById("button");
-    button.innerHTML="Login";	
+    var submitButton=document.getElementById("submitButton");
+    submitButton.innerHTML="Login";	
     /**
      * Adding event listener to button element present on the webpage
      */
-    button.addEventListener("click",buttonIsClicked);
+    submitButton.addEventListener("click",buttonIsClicked);
     function buttonIsClicked() {
         console.log("App Started");
+        
         var UserObject = new Object();
         UserObject.userName=username;
         UserObject.Password=password;
