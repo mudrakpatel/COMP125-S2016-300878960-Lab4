@@ -20,20 +20,24 @@
     var legend = document.getElementById("legend");
     legend.innerHTML = "300878960";
     var form = document.getElementById("form");
-    var username = document.getElementById("username").nodeValue;
-    var password = document.getElementById("password").nodeValue;
+    var username;
+    var password;
     var submitButton = document.getElementById("submitButton");
     submitButton.innerHTML = "Login";
     
-    document.querySelector('form.form').addEventListener('submit', function (e) {
+    document.forms[0].addEventListener('submit', function (e) {
 
         //prevent the normal submission of the form
         e.preventDefault();
         console.log("App Started");
-        var UserObject = new Object();
-        UserObject.userName = username;
-        UserObject.Password = password;
-        console.log(UserObject.userName);
+        /**
+         * @ creating object UserObject
+         */
+        var UserObject = {
+            UserName : document.getElementById("username").nodeValue,
+            Password : document.getElementById("password").nodeValue
+        }
+        console.log(UserObject.UserName);
         console.log(UserObject.Password);
     });
 })();
