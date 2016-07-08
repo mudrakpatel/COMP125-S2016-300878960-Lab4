@@ -25,7 +25,7 @@
     var submitButton = document.getElementById("submitButton");
     submitButton.innerHTML = "Login";
     
-    document.forms[0].addEventListener('submit', function (e) {
+    form.addEventListener('submit', function (e) {
 
         //prevent the normal submission of the form
         e.preventDefault();
@@ -34,8 +34,8 @@
          * @ creating object UserObject
          */
         var UserObject = {
-            UserName : document.getElementById("username").nodeValue,
-            Password : document.getElementById("password").nodeValue
+            UserName : document.getElementById("username").value,
+            Password : document.getElementById("password").value
         }
         console.log(UserObject.UserName);
         console.log(UserObject.Password);
